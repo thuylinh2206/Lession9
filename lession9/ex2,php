@@ -1,0 +1,25 @@
+<?php
+
+class Point2D {
+    protected $x;
+    protected $y;
+
+    public function __construct($x, $y){
+        $this->x = $x;
+        $this->y = $y;
+    }
+
+    public function calDistance(Point2D $point2D)
+    {
+        return sqrt(pow($this->x - $point2D->x, 2) + pow ($this->y - $point2D->y, 2));
+    }
+   
+    
+}
+
+$length = 2;
+$width = 6;
+$Retangcle = new Retangcle($length, $width);
+echo "Area of retangcle: " . $Retangcle->calArea() . "\n";
+echo "Perimeter of retangcle: " . $Retangcle->calPerimeter();
+?>
